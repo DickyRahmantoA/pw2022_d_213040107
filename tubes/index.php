@@ -7,6 +7,6 @@
   <title>Kainin.id</title>
 </head>
 <body>
-  <h2>Selamat Datang di Toko kami!</h2>
+  <h1>Selamat Datang di Toko kami!</h1>
 </body>
 </html>
