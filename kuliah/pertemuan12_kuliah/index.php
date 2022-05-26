@@ -29,7 +29,7 @@ if(isset($_GET["cari"])) {
   <body>
 
     <div class="container">
-      <h1>Daftar Mahasiswa</h1>
+      <h1 class="align-midcle">Daftar Mahasiswa</h1>
       <a href="tambah.php" class="btn btn-primary">Tambah Data</a>
 
       <form action="" method="GET" class="mt-4">

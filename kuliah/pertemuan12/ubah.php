@@ -21,7 +21,6 @@ $id = $_GET['id'];
 // query mahasiswa berdasarkan id
 $m = query("SELECT * FROM mahasiswa WHERE id = $id");
 
-
 // cek apakah tombol ubah sudah ditekan
 if (isset($_POST['ubah'])) {
   if (ubah($_POST) > 0) {
