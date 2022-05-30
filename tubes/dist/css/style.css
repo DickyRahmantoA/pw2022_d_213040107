@@ -1,0 +1,27 @@
+<!-- Kategori Awal -->
+<div class="container">
+  <div class="col">
+    <div class="row-lg-2 row-md-3 row-sm-4 row-6">
+      <div class="menu-kategori">
+        <a href="#">
+        <label for="customRange3" class="form-label"></label>
+        <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+        </a>
+        <p>Harga</p>
+        <hr>
+        <p>Jenis</p>
+        <hr>
+        <p>Corak</p>
+        <hr>
+        <p>Warna</p>
+        <hr>
+        <p>Cocok Untuk</p>
+        <hr>
+        <p>Gramasi</p>
+        <hr>
+        <p>Teknik Pembuatan</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Kategori Akhir -->
