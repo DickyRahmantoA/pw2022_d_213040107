@@ -113,30 +113,30 @@
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" 
             aria-label="Slide 4"></button>
           </div>
-          <div class="carousel-inner">
+          <div class="carousel-inner"  style="height: 100px; background-image: cover;"> 
             <div class="carousel-item active">
-              <img src="/tubes/img/12.jpg" class="d-block img-fluid" alt="header1">
+              <img src="/tubes/img/4.jpg" class="d-block img-fluid" alt="header1">
               <div class="card-img-overlay">
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="/tubes/img/11.jpg" class="d-block img-fluid" alt="header2">
+              <img src="/tubes/img/8.jpg" class="d-block img-fluid" alt="header2">
               <div class="card-img-overlay">
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="/tubes/img/14.jpg" class="d-block img-fluid" alt="header3">
+              <img src="/tubes/img/4.jpg" class="d-block img-fluid" alt="header3">
               <div class="card-img-overlay">
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="/tubes/img/14.png" class="d-block img-fluid" alt="header3">
+              <img src="/tubes/img/8.jpg" class="d-block img-fluid" alt="header3">
               <div class="card-img-overlay">
               <h5>Second slide label</h5>
               <p>Some representative placeholder content for the second slide.</p>
@@ -163,6 +163,70 @@
     <!-- Content Awal -->
 
     <!-- Content Akhir -->
+
+
+    <!-- Awal Footer -->
+    <footer class="p-5 mt-5" style="background-color: #b1cba6;">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
+            <p>CV. NUSA TEXTILE COMPANY</p>
+            <p>Perusahaan Textile Terbaik di Jawa Barat</p>
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-3 font-weight-bold text-white">Lokasi</h5>
+            <p>BLOK G, no.10, Jl. Cipanas PERUM BUMI NUSA INDAH, Nanjungmekar, Rancaekek, Nanjungmekar, Rancaekek, Nanjungmekar, Kec. Rancaekek, Kabupaten Bandung, Jawa Barat 40394</p>
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-3 font-weight-bold text-white">Jam Operasional</h5>
+            <p>Senin-Sabtu          : 07.00-17.00</p>
+            <p>Minggu & Hari Besar  : Tutup</p>
+            <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-success">Lihat Lokasi</a>
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-">
+            <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
+            <p><a href="index.php" style="text-decoration: none;" class="text-dark">Home</a></p>
+            <p><a href="katalog.php" style="text-decoration: none;" class="text-dark">Katalog</a></p>
+            <p><a href="aboutus.php" style="text-decoration: none;" class="text-dark">About Us</a></p>
+            <p><a href="Contact" style="text-decoration: none;" class="text-dark">Contact</a></p>
+            <a href="" class="btn btn-success">Hubungi Kami</a>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="row">
+          <div class="col-md-7 col-lg-8">
+            <p>Copyright @2022 Created by: 
+              <a href="https://github.com/kutulaut" style="text-decoration: none;">
+                <strong class="text-success">Kutulaut</strong>
+              </a></p>
+          </div>
+          <div class="col-md-3 col-lg-4">
+            <div class="text-center text-md-right">
+              <ul>
+                <li class="list-inline-item">
+                  <a href=""><img src="https://img.icons8.com/ios-filled/35/000000/whatsapp--v1.png"/></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href=""><img src="https://img.icons8.com/ios-filled/35/000000/instagram-new--v1.png"/></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href=""><img src="https://img.icons8.com/ios-filled/35/000000/twitter.png"/></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href=""><img src="https://img.icons8.com/ios-filled/35/000000/facebook-new.png"/></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href=""><img src="https://img.icons8.com/glyph-neue/35/000000/github.png"/></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+         
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
