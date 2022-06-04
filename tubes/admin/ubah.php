@@ -75,7 +75,9 @@ if(isset($_POST['ubah'])) {
       </div>
       <div class="input-group mt-4 mb-3">
            <span class="input-group-text">Gambar</span>
-           <input type="text" class="form-control" id="gambard" name="gambar" value="<?= $k['gambar']; ?>" required>
+           <input type="hidden" name="gambar_lama" value="<?= $k['gambar']; ?>">
+
+           <input type="file" class="form-control gambar" id="gambar" name="gambar" value="<?= $k['gambar']; ?>">
       </div>
 
                   <button type="submit" class="btn btn-primary" name="ubah">Ubah Data</button>

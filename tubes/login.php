@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kainin.id</title>
+    <title>Form Login Kainin.id</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <style>
       body {
@@ -45,14 +45,15 @@
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input placeholder="Masukkan password anda.." type="password" class="form-control" id="exampleInputPassword1">
+                <input placeholder="Masukkan Password anda.." type="password" class="form-control" id="exampleInputPassword1">
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
               </div>
-              <button type="submit" class="btn btn-primary w-25">Submit</button>
+              <button type="submit" class="btn btn-success w-100">Submit</button>
             </form>
+            <p style="color: #111; font-weight: 600;">Apakah anda sudah punya akun? jika belum klik <a href="registrasi.php">Registrasi</a></p>
           </div>
         </div>
       </div>

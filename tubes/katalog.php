@@ -66,51 +66,50 @@
     <!-- Navbar Akhir -->
 
     <!-- Carousel Awal -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide mt-3" data-bs-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide mt-3 mb-4" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/tubes/img/33.jpeg" class="d-block img-fluid" >
+        <div class="container">
+          <div class="carousel-item active">
+            <img src="/tubes/img/4.jpg" class="d-block img-fluid" >
+          </div>
         </div>
       </div>
 </div>
     <!-- Carousel Akhir -->
 
     <!-- Kategori Awal -->
-<!-- <div class="container">
-  <div class="box">
-    <div class="row contentform">
-      <div class="col-sm-12 col-md-6 col-lg-6">
-      <div class="menu-kategori">
+    <div class="container">
+  <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Belum Mendapatkan Kain yang Sesuai?
+  </button>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Filter Kategori</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
         <a href="#">
-        <label for="customRange3" class="form-label"></label>
-        <input type="range" class="form-range">
+          <label for="customRange3" class="form-label"></label>
+          <input type="range" class="form-range">
         </a>
         <p>Harga</p>
-        <hr width="12%">
+        <hr width="50%">
         <p>Jenis</p>
-        <hr width="12%">
+        <hr width="50%">
         <p>Corak</p>
-        <hr width="12%">
+        <hr width="50%">
         <p>Warna</p>
-        <hr width="12%">
+        <hr width="50%">
         <p>Cocok Untuk</p>
-        <hr width="12%">
+        <hr width="50%">
         <p>Gramasi</p>
-        <hr width="12%">
+        <hr width="50%">
         <p>Teknik Pembuatan</p>
-        <hr width="12%">
+        <hr width="50%">
       </div>
-      </div> -->
-      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
-  </div>
-</div>
+    </div>
+    </div>
+
+  <div class="container mt-4">
   <div class="row">
   <div class="col-sm-6">
     <div class="card">

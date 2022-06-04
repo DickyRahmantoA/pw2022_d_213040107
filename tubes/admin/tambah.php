@@ -35,7 +35,7 @@ if(isset($_POST['tambah'])) {
       <h1>Tambah Kain</h1>
       <a href="index.php" class="btn btn-primary">Kembali ke Daftar Kain</a>
 
-    <form action="" method="POST" autocomplete="off">
+    <form action="" method="POST" autocomplete="off" enctype="multipart/form-data">
       <div class="input-group mt-4 mb-3">
            <span class="input-group-text" id="basic-addon1">Nama Kain</span>
            <input type="text" class="form-control" name="nama" required>
@@ -70,7 +70,8 @@ if(isset($_POST['tambah'])) {
       </div>
       <div class="input-group mt-4 mb-3">
            <span class="input-group-text" id="basic-addon1">gambar</span>
-           <input type="text" class="form-control" name="gambar" required>
+           <img src="" class="img-thumbnail" width="120" style="display: none;" id="img-preview">
+           <input type="file" class="form-control" name="gambar" id="gambar" onchange="previewImage()">
       </div>
 
                   <button type="submit" class="btn btn-primary mb-4" name="tambah">Tambah Data</button>
@@ -90,5 +91,6 @@ if(isset($_POST['tambah'])) {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+    <script src="/tubes/dist/js/script.js"></script>
   </body>
 </html>
