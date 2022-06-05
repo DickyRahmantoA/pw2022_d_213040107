@@ -18,16 +18,17 @@ if(isset($_POST['cari'])) {
   </head>
   <body>
 
-  <div class="container">
-      <h1>Daftar Kain</h1>
-      <a href="tambah.php" class="btn btn-success">Tambah Data</a>
+  <div class="container mt-5">
+      <h1 class="text-center mt-5">Daftar Kain di Kainin.id</h1>
+      <a href="tambah.php" class="btn btn-outline-success">Tambah Data</a>
 
       <form action="" method="POST" class="mt-4">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" name="keyword" placeholder="Cari Kain Disini.." autocomplete="off"> 
-          <button class="tombol-cari btn btn-success" type="submit" name="cari">Cari</button>
+          <input type="text" class="keyword form-control" name="keyword" placeholder="Cari Kain Disini.." autocomplete="off"> 
+          <button class="tombol-cari btn btn-outline-success" type="submit" name="cari">Cari</button>
         </div>
       </form>
+      <div class="container">
   <table class="table table-success table-striped">
   <thead>
     <tr>
@@ -45,8 +46,16 @@ if(isset($_POST['cari'])) {
     </tr>
   </thead>
   <tbody>
-    
-    <?php $i= 1; foreach( $kain as $k ) : ?>
+
+  <?php if(empty($kain)) : ?>
+      <tr>
+        <td colspan="11">
+          <p style="color: red; font-style: italic;" class="text-center">Data Kain Tidak ditemukan!</p>
+        </td>
+      </tr>
+    <?php endif; ?>
+    <?php $i = 1; 
+    foreach( $kain as $k ) : ?>
       <tr>
         <th scope="row" class="align-middle"><?= $i++; ?></th>
             <td class="align-middle"><?= $k["nama"]?></td>
@@ -58,7 +67,7 @@ if(isset($_POST['cari'])) {
             <td class="align-middle"><?= $k["cocok_untuk"]?></td>
             <td class="align-middle"><?= $k["gramasi"]?></td>
             <td class="align-middle">
-                <img src="../img/ <?= $k["gambar"]; ?>" height="50" class="rounded-circle">
+                <img src="../img/<?= $k["gambar"]; ?>" height="50" class="rounded">
             </td>
             <td class="align-middle">
                 <a href="ubah.php?id=<?= $k["id"]; ?>" class="btn badge bg-warning">ubah</a>
@@ -68,6 +77,7 @@ if(isset($_POST['cari'])) {
      <?php endforeach; ?>
   </tbody>
 </table>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="../dist/js/script.js"></script>
   </body>

@@ -32,7 +32,6 @@
         text-align: center;
       }
       }
-      /* Style */
     </style>
   </head>
 
@@ -54,10 +53,10 @@
           <a class="nav-link active" href="katalog.php">Katalog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="aboutus.php">About Us</a>
+          <a class="nav-link active" href="aboutus.php">Tentang Toko</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="contact.php">Contact</a>
+          <a class="nav-link active" href="contact.php">Hubungi Kami</a>
         </li>
       </ul>
     </div>
@@ -110,46 +109,37 @@
             aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" 
             aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" 
-            aria-label="Slide 4"></button>
           </div>
-          <div class="carousel-inner"  style="height: 100px; background-image: cover;"> 
+          <div class="carousel-inner"> 
             <div class="carousel-item active">
-              <img src="/tubes/img/4.jpg" class="d-block img-fluid" alt="header1">
+              <img src="img/b.jpg" class="d-block img-fluid" alt="header1">
+              <div class="card-img-overlay">
+                <h5 class="mx-5">Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/a.jpg" class="d-block img-fluid" alt="header2">
               <div class="card-img-overlay">
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="/tubes/img/8.jpg" class="d-block img-fluid" alt="header2">
+              <img src="img/e.jpg" class="d-block img-fluid" alt="header3">
               <div class="card-img-overlay">
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
               </div>
-            </div>
-            <div class="carousel-item">
-              <img src="/tubes/img/4.jpg" class="d-block img-fluid" alt="header3">
-              <div class="card-img-overlay">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="/tubes/img/8.jpg" class="d-block img-fluid" alt="header3">
-              <div class="card-img-overlay">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
             </div>
           </div>
         </div>
       </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <button class="carousel-control-next mt-5" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -184,7 +174,7 @@
             <p>Minggu & Hari Besar  : Tutup</p>
             <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-success">Lihat Lokasi</a>
           </div>
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
             <p><a href="index.php" style="text-decoration: none;" class="text-dark">Home</a></p>
             <p><a href="katalog.php" style="text-decoration: none;" class="text-dark">Katalog</a></p>

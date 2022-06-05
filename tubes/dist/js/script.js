@@ -1,3 +1,9 @@
+const tombolCari = document.querySelector(".tombol-cari");
+const keyword = document.querySelector(".keyword");
+const container = document.querySelector(".container");
+
+tombolCari.style.display = "none";
+
 // event ketika kita menuliskan keyword
 keyword.addEventListener("keyup", function () {
   // fetch()

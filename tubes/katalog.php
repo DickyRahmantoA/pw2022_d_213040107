@@ -1,3 +1,8 @@
+<?php 
+  require 'admin/functions.php';
+  $kain = query("SELECT * FROM kain");
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -79,7 +84,7 @@
 
     <!-- Kategori Awal -->
     <div class="container">
-  <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Belum Mendapatkan Kain yang Sesuai?
+  <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Belum Mendapatkan Kain yang Sesuai?
   </button>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
       <div class="offcanvas-header">
@@ -87,10 +92,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <a href="#">
+        <!-- <a href="#">
           <label for="customRange3" class="form-label"></label>
           <input type="range" class="form-range">
-        </a>
+        </a> -->
         <p>Harga</p>
         <hr width="50%">
         <p>Jenis</p>
@@ -108,32 +113,52 @@
       </div>
     </div>
     </div>
+      <!-- Kategori Akhir -->
 
+      <!-- Produk Awal -->
   <div class="container mt-4">
-  <div class="row">
-  <div class="col-sm-6">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      <?php foreach($kain as $k) : ?>
+      <img src="img/<?= $k['gambar']; ?>" height="250" class="rounded-3">
+        <h5 class="card-title mt-2"><?= $k['nama']; ?></h5>
+        <p class="card-text"><?= $k['harga']; ?>/meter</p>
+        <a href="detail.php?id=<?= $k['id'];?>" class="btn btn-outline-success mb-3">Selengkapnya...</a>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
+  <div class="col">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      <?php foreach($kain as $k) : ?>
+      <img src="img/<?= $k['gambar']; ?>" height="250" class="rounded-3">
+        <h5 class="card-title mt-2"><?= $k['nama']; ?></h5>
+        <p class="card-text"><?= $k['harga']; ?>/meter</p>
+        <a href="detail.php?id=<?= $k['id'];?>" class="btn btn-outline-success mb-3">Selengkapnya...</a>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
-</div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+      <?php foreach($kain as $k) : ?>
+      <img src="img/<?= $k['gambar']; ?>" height="250" class="rounded-3">
+        <h5 class="card-title mt-2"><?= $k['nama']; ?></h5>
+        <p class="card-text"><?= $k['harga']; ?>/meter</p>
+        <a href="detail.php?id=<?= $k['id'];?>" class="btn btn-outline-success mb-3">Selengkapnya...</a>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+  </div>
     </div>
   </div>
 </div>
-<!-- Kategori Akhir -->
+    <!-- Produk Akhir -->
 
     <!-- Awal Footer -->
  <footer class="p-5 mt-5" style="background-color: #b1cba6;">
@@ -152,7 +177,7 @@
           <h5 class="text-uppercase mb-3 font-weight-bold text-white">Jam Operasional</h5>
             <p>Senin-Sabtu          : 07.00-17.00</p>
             <p>Minggu & Hari Besar  : Tutup</p>
-            <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-success">Lihat Lokasi</a>
+            <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-outline-success">Lihat Lokasi</a>
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
@@ -160,7 +185,7 @@
             <p><a href="katalog.php" style="text-decoration: none;" class="text-dark">Katalog</a></p>
             <p><a href="aboutus.php" style="text-decoration: none;" class="text-dark">About Us</a></p>
             <p><a href="Contact" style="text-decoration: none;" class="text-dark">Contact</a></p>
-            <a href="" class="btn btn-success">Hubungi Kami</a>
+            <a href="" class="btn btn-outline-success">Hubungi Kami</a>
         </div>
         </div>
         <hr class="mb-4">
