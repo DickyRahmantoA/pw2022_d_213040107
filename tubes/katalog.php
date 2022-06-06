@@ -26,6 +26,18 @@
         font-size: 14px;
       }
 
+      .card-img{
+        overflow: hidden;
+      }
+
+      .card-img a{
+        transition: all 1.3s ease;
+      }
+
+      .card-img:hover a{
+        transform: scale(1.2);
+      }
+
       @media screen and (min-width: 994px) {
               .form-control {
         width: 350px;
@@ -43,7 +55,7 @@
 
   <body>
     <!-- Navbar Awal -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
   <div class="container">
     <a class="navbar-brand ml" href="index.php">Kainin<strong>.id</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,13 +68,16 @@
       </form>
       <ul class="navbar-nav ms-auto mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="katalog.php" >Katalog</a>
+          <a class="nav-link active" href="katalog.php">Katalog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="aboutus.php">About Us</a>
+          <a class="nav-link active" href="aboutus.php">Tentang Toko</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="contact.php">Contact</a>
+          <a class="nav-link active" href="contact.php">Hubungi Kami</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active btn btn-outline-success" href="logout.php" >keluar</a>
         </li>
       </ul>
     </div>
@@ -73,12 +88,17 @@
     <!-- Carousel Awal -->
     <div id="carouselExampleSlidesOnly" class="carousel slide mt-3 mb-4" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="container">
+        <div class="container mt-2">
           <div class="carousel-item active">
-            <img src="/tubes/img/4.jpg" class="d-block img-fluid" >
+            <img src="img/c.jpg" class="d-block img-fluid" >
+            <div class="card-img-overlay text-center">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 </div>
     <!-- Carousel Akhir -->
 
@@ -88,28 +108,108 @@
   </button>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Filter Kategori</h5>
+        <h5 class="offcanvas-title text-center" id="offcanvasWithBothOptionsLabel">Filter Kategori</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <!-- <a href="#">
-          <label for="customRange3" class="form-label"></label>
-          <input type="range" class="form-range">
-        </a> -->
-        <p>Harga</p>
-        <hr width="50%">
-        <p>Jenis</p>
-        <hr width="50%">
-        <p>Corak</p>
-        <hr width="50%">
-        <p>Warna</p>
-        <hr width="50%">
-        <p>Cocok Untuk</p>
-        <hr width="50%">
-        <p>Gramasi</p>
-        <hr width="50%">
-        <p>Teknik Pembuatan</p>
-        <hr width="50%">
+        <select class="form-select form-select-md" aria-label=".form-select-sm example">
+          <option selected>Harga</option>
+          <option value="1"> 
+            <a href="#">
+              <label label for="customRange3" class="form-label"></label>
+              <input type="range" class="form-range">
+            </a>
+          </option>
+        </select>
+        <hr>
+        <select class="form-select form-select-md" aria-label=".form-select-sm example">
+          <option selected>Jenis</option>
+          <option value="1">Polyester</option>
+          <option value="2">Sifon</option>
+          <option value="3">Nylon</option>
+          <option value="4">Kaos</option>
+        </select>
+        <hr>
+        <select class="form-select form-select-md" aria-label=".form-select-sm example">
+          <option selected>Corak</option>
+          <option value="1">Kotak-kotak</option>
+          <option value="2">Garis-garis</option>
+          <option value="3">Bunga-bunga</option>
+          <option value="4">Polos</option>
+          <option value="5">Abstract Layer</option>
+          <option value="6">Rib Knit</option>
+        </select>
+        <hr>
+        <select class="form-select form-select-md" aria-label=".form-select-sm example">
+          <option selected>Warna</option>
+          <option value="1">Warna warni</option>
+          <option value="2">Ungu</option>
+          <option value="3">Kuning</option>
+          <option value="4">Coklat</option>
+          <option value="5">Merah</option>
+          <option value="6">Navy</option>
+          <option value="7">Hijau</option>
+          <option value="8">Hitam</option>
+          <option value="9">Pink</option>
+          <option value="10">Putih</option>
+          <option value="11">Marun</option>
+          <option value="12">Jingga</option>
+          <option value="13">Cream</option>
+          <option value="14">Abu-abu</option>
+          <option value="15">Violet</option>
+          <option value="16">Biru Muda</option>
+          <option value="17">Mint</option>
+          <option value="18">Dark Grey</option>
+          <option value="19">Biru</option>
+          <option value="20">Mustard</option>
+          <option value="21">Terakota</option>
+        </select>
+        <hr>
+        <select class="form-select form-select-md" aria-label=".form-select-sm example">
+          <option selected>Teknik Pembuatan</option>
+          <option value="1">Woven</option>
+          <option value="2">Twill Woven</option>
+          <option value="3">Knitting</option>
+        </select>
+        <hr>
+        <select class="form-select form-select-md" aria-label=".form-select-sm example">
+        <option selected>Cocok Untuk</option>
+          <option value="1">Atasan</option>
+          <option value="2">Kemeja</option>
+          <option value="3">Tunik</option>
+          <option value="4">Blouse</option>
+          <option value="5">Gamis</option>
+          <option value="6">Dress</option>
+          <option value="7">Daster</option>
+          <option value="8">Blazer</option>
+          <option value="9">Rok</option>
+          <option value="10">Piyama</option>
+          <option value="11">Setelan one set</option>
+          <option value="12">Crop top</option>
+          <option value="13">Dekorasi</option>
+          <option value="14">Legging</option>
+          <option value="15">Manset</option>
+          <option value="16">Celana olahraga</option>
+          <option value="17">Culotte</option>
+          <option value="18">Outer</option>
+          <option value="19">Cardigan</option>
+          <option value="20">Celana</option>
+          <option value="21">Baju</option>
+          <option value="22">Baju Koko</option>
+          <option value="23">Jumpsuit</option>
+          <option value="24">Sweater</option>
+        </select>
+        <hr>
+        <select class="form-select form-select-md" aria-label=".form-select-sm example">
+          <option selected>Gramasi</option>
+          <option value="1">1-100</option>
+          <option value="2">101-150</option>
+          <option value="3">151-200</option>
+          <option value="4">201-250</option>
+          <option value="5">251-300</option>
+          <option value="6">300++</option>
+        </select>
+        <hr>
       </div>
     </div>
     </div>
@@ -117,47 +217,23 @@
 
       <!-- Produk Awal -->
   <div class="container mt-4">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-      <?php foreach($kain as $k) : ?>
-      <img src="img/<?= $k['gambar']; ?>" height="250" class="rounded-3">
-        <h5 class="card-title mt-2"><?= $k['nama']; ?></h5>
-        <p class="card-text"><?= $k['harga']; ?>/meter</p>
-        <a href="detail.php?id=<?= $k['id'];?>" class="btn btn-outline-success mb-3">Selengkapnya...</a>
-        <?php endforeach; ?>
+  <div class="row">
+  <?php foreach($kain as $k) : ?>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-img">
+            <a href="detail.php?id=<?= $k['id'];?>" class="d-flex"><img src="img/<?= $k['gambar']; ?>" height="250" class="rounded-3 img-fluid"></a>
+          </div>
+          <h5 class="card-title mt-2"><?= $k['nama']; ?></h5>
+          <p class="card-text"><?= $k['harga']; ?>/meter</p>
+          <a href="detail.php?id=<?= $k['id'];?>" class="btn btn-outline-success mb-3">Selengkapnya..</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-      <?php foreach($kain as $k) : ?>
-      <img src="img/<?= $k['gambar']; ?>" height="250" class="rounded-3">
-        <h5 class="card-title mt-2"><?= $k['nama']; ?></h5>
-        <p class="card-text"><?= $k['harga']; ?>/meter</p>
-        <a href="detail.php?id=<?= $k['id'];?>" class="btn btn-outline-success mb-3">Selengkapnya...</a>
-        <?php endforeach; ?>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-      <?php foreach($kain as $k) : ?>
-      <img src="img/<?= $k['gambar']; ?>" height="250" class="rounded-3">
-        <h5 class="card-title mt-2"><?= $k['nama']; ?></h5>
-        <p class="card-text"><?= $k['harga']; ?>/meter</p>
-        <a href="detail.php?id=<?= $k['id'];?>" class="btn btn-outline-success mb-3">Selengkapnya...</a>
-        <?php endforeach; ?>
-      </div>
-    </div>
+  <?php endforeach; ?>
   </div>
   </div>
-    </div>
-  </div>
-</div>
     <!-- Produk Akhir -->
 
     <!-- Awal Footer -->

@@ -57,17 +57,17 @@
             <form action="" method="POST" required>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Username</label>
-                <input placeholder="Masukkan Username anda.." type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
+                <input placeholder="Masukkan Username anda.." type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" autofocus autocomplete="off" required>
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input placeholder="Masukkan Password anda.." type="password" class="form-control" id="exampleInputPassword1" name="password1">
+                <input placeholder="Masukkan Password anda.." type="password" class="form-control" id="exampleInputPassword1" name="password1" required>
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
-                <input placeholder="Masukkan Kembali Password anda.." type="password" class="form-control" id="exampleInputPassword1" name="password2">
+                <input placeholder="Masukkan Kembali Password anda.." type="password" class="form-control" id="exampleInputPassword1" name="password2" required>
               </div>
-              <button type="submit" name="submit" class="btn btn-success w-100">Registrasi</button>
+              <button type="submit" name="registrasi" class="btn btn-outline-success w-100">Registrasi</button>
             </form>
             <p style="color: #111; font-weight: 600;">Apakah anda sudah punya akun? jika sudah klik <a href="login.php">Login</a></p>
           </div>

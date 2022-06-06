@@ -34,11 +34,11 @@
       }
       /* Style */
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Navbar Awal -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
   <div class="container">
     <a class="navbar-brand ml" href="index.php">Kainin<strong>.id</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,13 +51,16 @@
       </form>
       <ul class="navbar-nav ms-auto mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="katalog.php" >Katalog</a>
+          <a class="nav-link active" href="katalog.php">Katalog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="aboutus.php">About Us</a>
+          <a class="nav-link active" href="aboutus.php">Tentang Toko</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="contact.php">Contact</a>
+          <a class="nav-link active" href="contact.php">Hubungi Kami</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active btn btn-outline-success" href="logout.php" >keluar</a>
         </li>
       </ul>
     </div>
@@ -101,9 +104,9 @@
 
     <!-- Awal Footer -->
 <footer class="p-5 mt-5" style="background-color: #b1cba6;">
-    <div class="container text-center text-md-left">
-      <div class="row text-center text-md-left">
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+  <div class="container text-center text-md-left">
+    <div class="row text-center text-md-left">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
           <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
             <p>CV. NUSA TEXTILE COMPANY</p>
             <p>Perusahaan Textile Terbaik di Jawa Barat</p>
@@ -116,7 +119,7 @@
           <h5 class="text-uppercase mb-3 font-weight-bold text-white">Jam Operasional</h5>
             <p>Senin-Sabtu          : 07.00-17.00</p>
             <p>Minggu & Hari Besar  : Tutup</p>
-            <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-success">Lihat Lokasi</a>
+            <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-outline-success">Lihat Lokasi</a>
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
@@ -124,7 +127,7 @@
             <p><a href="katalog.php" style="text-decoration: none;" class="text-dark">Katalog</a></p>
             <p><a href="aboutus.php" style="text-decoration: none;" class="text-dark">About Us</a></p>
             <p><a href="Contact" style="text-decoration: none;" class="text-dark">Contact</a></p>
-            <a href="" class="btn btn-success">Hubungi Kami</a>
+            <a href="" class="btn btn-outline-success">Hubungi Kami</a>
         </div>
         </div>
         <hr class="mb-4">

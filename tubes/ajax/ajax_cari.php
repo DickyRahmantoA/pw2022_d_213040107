@@ -1,8 +1,15 @@
 <?php 
 require '../admin/functions.php';
-$kain = cari($_GET['keyword']);
+$keyword = $_GET['keyword'];
+$kain = query("SELECT * FROM kain WHERE nama LIKE '%$keyword%' OR jenis LIKE '%$keyword%'  ");
 ?>
 
+<form action="" method="POST" class="mt-4">
+  <div class="input-group mb-3">
+     <input type="text" class="keyword form-control" name="keyword" placeholder="Cari Kain Disini.." autocomplete="off"> 
+     <button class="tombol-cari btn btn-outline-success" type="submit" name="cari">Cari</button>
+  </div>
+</form>
 <table class="table table-success table-striped">
   <thead>
     <tr>
@@ -23,8 +30,8 @@ $kain = cari($_GET['keyword']);
     
     <?php if(empty($kain)) : ?>
       <tr>
-        <td colspan="4">
-          <p style="color: red; font-style: italic;">Data Kain Tidak ditemukan!</p>
+        <td colspan="11">
+          <p style="color: red; font-style: italic;" class="text-center">Data Kain Tidak ditemukan!</p>
         </td>
       </tr>
     <?php endif; ?>

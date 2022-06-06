@@ -1,3 +1,21 @@
+<?php 
+
+session_start();
+
+if(isset($_SESSION['login'])) {
+  header("Location: index.php");
+  exit;
+}
+
+require 'admin/functions.php';
+
+// ketika tombol login ditekan
+if(isset($_POST['login'])) {
+  $login = login($_POST);
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,20 +56,23 @@
           </div>
           <div class="col-sm-12 col-md-6 col-lg-6">
             <h4 class="text-center mt-3">Form Login</h4>
-            <form>
+            <?php if(isset($login['error'])) : ?>
+              <p style="color: red; font-style: italic;"><?= $login['pesan']; ?></p>
+            <?php endif; ?>
+            <form action="" method="POST">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Username</label>
-                <input placeholder="Masukkan Username anda.." type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input placeholder="Masukkan Username anda.." name="username" type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autofocus autocomplete="off" required>
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input placeholder="Masukkan Password anda.." type="password" class="form-control" id="exampleInputPassword1">
+                <input placeholder="Masukkan Password anda.." type="password" name="password" class="form-control" id="exampleInputPassword1">
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
               </div>
-              <button type="submit" class="btn btn-success w-100">Submit</button>
+              <button type="submit" name="login" class="btn btn-success w-100">Login</button>
             </form>
             <p style="color: #111; font-weight: 600;">Apakah anda sudah punya akun? jika belum klik <a href="registrasi.php">Registrasi</a></p>
           </div>

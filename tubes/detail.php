@@ -53,7 +53,7 @@ $k = query("SELECT * FROM kain WHERE id = $id")[0];
 </head>
 <body>
        <!-- Navbar Awal -->
-       <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
   <div class="container">
     <a class="navbar-brand ml" href="index.php">Kainin<strong>.id</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,10 +69,13 @@ $k = query("SELECT * FROM kain WHERE id = $id")[0];
           <a class="nav-link active" href="katalog.php">Katalog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="aboutus.php">About Us</a>
+          <a class="nav-link active" href="aboutus.php">Tentang Toko</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="contact.php">Contact</a>
+          <a class="nav-link active" href="contact.php">Hubungi Kami</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active btn btn-outline-success" href="logout.php" >keluar</a>
         </li>
       </ul>
     </div>
@@ -82,10 +85,11 @@ $k = query("SELECT * FROM kain WHERE id = $id")[0];
 
     <!-- Content Awal -->
     <div class="container mt-5">
+    <a href="katalog.php" class="btn btn-outline-success mb-3">Kembali ke Daftar Kain</a>
   <div class="row">
     <div class="col-md-6">
      <div class="p-3 border"><img src="img/<?= $k['gambar'];?>" width="500" class="mt-3 rounded-3 img-fluid"></div>
-     <a href="katalog.php" class="btn btn-outline-success mt-3 w-100">Kembali ke Daftar Kain</a>
+     <a href="#" class="btn btn-outline-success mt-3 w-100">Order Di sini</a>
     </div>
     <div class="col-md-6">
       <div class="p-3 border">
@@ -134,11 +138,11 @@ $k = query("SELECT * FROM kain WHERE id = $id")[0];
 
     <!-- Content Akhir -->
 
-        <!-- Awal Footer -->
- <footer class="p-5 mt-5" style="background-color: #b1cba6;">
-    <div class="container text-center text-md-left">
-      <div class="row text-center text-md-left">
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+    <!-- Awal Footer -->
+<footer class="p-5 mt-5" style="background-color: #b1cba6;">
+  <div class="container text-center text-md-left">
+    <div class="row text-center text-md-left">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
           <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
             <p>CV. NUSA TEXTILE COMPANY</p>
             <p>Perusahaan Textile Terbaik di Jawa Barat</p>

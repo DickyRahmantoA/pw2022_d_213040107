@@ -38,7 +38,7 @@
 
   <body>
     <!-- Navbar Awal -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
   <div class="container">
     <a class="navbar-brand ml" href="index.php">Kainin<strong>.id</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,13 +51,16 @@
       </form>
       <ul class="navbar-nav ms-auto mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="katalog.php" >Katalog</a>
+          <a class="nav-link active" href="katalog.php">Katalog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="aboutus.php">About Us</a>
+          <a class="nav-link active" href="aboutus.php">Tentang Toko</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="contact.php">Contact</a>
+          <a class="nav-link active" href="contact.php">Hubungi Kami</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active btn btn-outline-success" href="logout.php" >keluar</a>
         </li>
       </ul>
     </div>
@@ -82,7 +85,7 @@
           <img src="/tubes/img/3.jpg" class="img-fluid rounded-4">
         </div>
       </div>
-      <div class="container" style="text-align: left;">
+      <div class="container" style="text-align: justify;">
       <h1 class="mt-5">Lebih Dari 15 Tahun memberikan</h1>
       <h2>yang terbaik untuk anda</h2>
       <p class="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iusto voluptas eius minus nostrum optio? Doloribus, alias suscipit officia blanditiis ea quis minima magnam? Rerum, exercitationem? Illum nulla officiis illo fuga deleniti sed voluptatibus praesentium, eum nam totam, id mollitia nostrum quod eos ratione quia hic necessitatibus soluta nesciunt aliquam. Perspiciatis labore sed, porro quis vero deleniti, quae modi dolorum, numquam optio odio recusandae molestiae alias. Ea molestiae dolore odit, facilis iste error numquam velit at inventore architecto mollitia, excepturi ducimus fugiat quo adipisci, nobis non molestias nisi natus! Ducimus, eveniet atque voluptatum quaerat aut similique soluta nobis libero non dolore maxime tempora corrupti provident vitae earum in exercitationem error alias dolorum nesciunt magnam sed! Temporibus perspiciatis possimus recusandae nesciunt fuga in. Doloremque laboriosam deserunt ut exercitationem omnis ab a sequi magni accusamus illo! Rerum sed quisquam similique ea blanditiis, sint inventore dicta minima nulla? Temporibus fuga earum aspernatur blanditiis quis tempora minima officia quam nisi nesciunt esse odio reprehenderit, doloribus nam rerum vero consequatur, eius, quos quidem! Velit alias at, natus itaque aperiam, numquam quidem reiciendis id accusantium ea molestiae temporibus repellat nemo non! Reiciendis voluptatum eum cupiditate suscipit tempora incidunt officia. Quisquam a maxime aut ipsum dignissimos quibusdam.</p>
@@ -91,9 +94,9 @@
     <!-- Content Akhir -->
 
     <!-- Awal Footer -->
- <footer class="p-5 mt-5" style="background-color: #b1cba6;">
-    <div class="container text-center text-md-left">
-      <div class="row text-center text-md-left">
+<footer class="p-5 mt-5" style="background-color: #b1cba6;">
+  <div class="container text-center text-md-left">
+     <div class="row text-center text-md-left">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
           <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
             <p>CV. NUSA TEXTILE COMPANY</p>
@@ -107,7 +110,7 @@
           <h5 class="text-uppercase mb-3 font-weight-bold text-white">Jam Operasional</h5>
             <p>Senin-Sabtu          : 07.00-17.00</p>
             <p>Minggu & Hari Besar  : Tutup</p>
-            <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-success">Lihat Lokasi</a>
+            <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-outline-success">Lihat Lokasi</a>
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
@@ -115,7 +118,7 @@
             <p><a href="katalog.php" style="text-decoration: none;" class="text-dark">Katalog</a></p>
             <p><a href="aboutus.php" style="text-decoration: none;" class="text-dark">About Us</a></p>
             <p><a href="Contact" style="text-decoration: none;" class="text-dark">Contact</a></p>
-            <a href="" class="btn btn-success">Hubungi Kami</a>
+            <a href="" class="btn btn-outline-success">Hubungi Kami</a>
         </div>
         </div>
         <hr class="mb-4">

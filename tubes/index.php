@@ -1,3 +1,15 @@
+<?php 
+
+// session_start();
+
+// if(!isset($_SESSION['login'])) {
+//   header("Location: login.php");
+//   exit;
+// }
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -37,7 +49,7 @@
 
   <body>
     <!-- Navbar Awal -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #b1cba6;">
   <div class="container">
     <a class="navbar-brand ml" href="index.php">Kainin<strong>.id</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,48 +70,16 @@
         <li class="nav-item">
           <a class="nav-link active" href="contact.php">Hubungi Kami</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active btn btn-outline-success" href="logout.php" >keluar</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
     <!-- Navbar Akhir -->
 
-
     <!-- Carousel Awal -->
-    <!-- <div class="container">
-      <div id="carouselExampleIndicators" class="carousel slide mt-5 " data-bs-ride="true">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active card-img-overlay">
-            <img src="/tubes/img/4.jpg" class="d-block img-fluid" style="height: 270px; width: 1200px;">
-            <div class="card-img-overlay d-flex justify-content-center align-content-center">
-              <h5 class="card-title">Selamat</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text">Last updated 3 mins ago</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/tubes/img/9.jpg" class="d-block img-fluid" style="height: 270px; width: 1200px;">
-          </div>
-          <div class="carousel-item">
-            <img src="/tubes/img/8.jpg" class="d-block img-fluid" style="height: 270px; width: 1200px;">
-          </div>
-        </div> -->
-        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button> -->
-      <!-- </div>
-    </div> -->
-    <!-- Carousel Akhir -->
     <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
           <div class="carousel-indicators">
@@ -112,21 +92,21 @@
           </div>
           <div class="carousel-inner"> 
             <div class="carousel-item active">
-              <img src="img/b.jpg" class="d-block img-fluid" alt="header1">
+              <img src="img/b.jpg" class="d-block img-fluid rounded-2" alt="header1">
               <div class="card-img-overlay">
                 <h5 class="mx-5">Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/a.jpg" class="d-block img-fluid" alt="header2">
+              <img src="img/e.jpg" class="d-block img-fluid rounded-2" alt="header2">
               <div class="card-img-overlay">
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/e.jpg" class="d-block img-fluid" alt="header3">
+              <img src="img/a.jpg" class="d-block img-fluid rounded-2" alt="header3">
               <div class="card-img-overlay">
                 <h5>Second slide label</h5>
                 <p>Some representative placeholder content for the second slide.</p>
@@ -135,53 +115,72 @@
           </div>
         </div>
       </div>
-          <button class="carousel-control-prev mt-5" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next mt-5" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
-
-
-
-
+    <!-- Carousel Akhir -->
 
     <!-- Content Awal -->
-
+    <div class="container mt-5" style="max-width: 900px;">
+    <div class="row">
+        <div class="col-md-4 text-center">
+         <a href=""><img src="img/ina.jpg" class="rounded-5" style="height: 200px;;"/></a>
+         <p style="text-align: center; font-size:20px;">Kain terbaik di Indonesia</p>
+        </div>
+        <div class="col-md-4 text-center">
+         <a href=""><img src="img/cb.jpg" class="rounded-5" style="height: 200px;;"/></a>
+         <p style="text-align: center; font-size:20px;">Selalu Ready Stok</p>
+        </div>
+        <div class="col-md-4 text-center">
+         <a href=""><img src="img/cashback.jpg" class="rounded-5" style="height: 200px;;"/></a>
+         <p style="text-align: center; font-size:20px;">Selalu banyak Diskon</p>
+        </div>
+    </div>
+    </div>
+    <div class="container mt-5">
+      <div class="card mb-3" style="max-width: 1150px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/8.jpg" class="mt-5 mx-2 d-block img-fluid rounded-4">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-center">Card title</h5>
+              <p class="card-text" style="text-align:justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate enim, repudiandae similique asperiores magnam sint nihil dolore commodi ipsam porro, voluptatum illum nobis iure ut odit. Omnis animi velit et iusto sunt dolores aliquam itaque facilis dolor sapiente ratione autem natus hic vitae accusamus magni, obcaecati, corrupti similique! Animi soluta consectetur ipsa qui nostrum sunt iste rerum commodi, asperiores perferendis enim eaque quis perspiciatis velit, aperiam mollitia, tempore quo repudiandae fugit. Qui voluptates quis deserunt laboriosam cupiditate ratione ea, atque recusandae dicta praesentium unde autem veritatis placeat dolores tenetur excepturi cumque laborum ullam provident corrupti molestias? Illum, dignissimos sunt? Nostrum modi error repellendus harum inventore totam eum minima provident ea laudantium facere architecto laboriosam obcaecati veniam iure dolorum nesciunt facilis nisi incidunt pariatur deleniti, doloremque quasi. Porro quasi rerum, dolores optio, nobis nostrum quidem ex aperiam modi, pariatur fugit voluptatem iste laudantium. Aspernatur doloremque voluptatibus a tempora odit qui earum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Content Akhir -->
 
 
     <!-- Awal Footer -->
-    <footer class="p-5 mt-5" style="background-color: #b1cba6;">
-      <div class="container text-center text-md-left">
-        <div class="row text-center text-md-left">
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
+<footer class="p-5 mt-5" style="background-color: #b1cba6;">
+  <div class="container text-center text-md-left">
+    <div class="row text-center text-md-left">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
             <p>CV. NUSA TEXTILE COMPANY</p>
             <p>Perusahaan Textile Terbaik di Jawa Barat</p>
-          </div>
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h5 class="text-uppercase mb-3 font-weight-bold text-white">Lokasi</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-3 font-weight-bold text-white">Lokasi</h5>
             <p>BLOK G, no.10, Jl. Cipanas PERUM BUMI NUSA INDAH, Nanjungmekar, Rancaekek, Nanjungmekar, Rancaekek, Nanjungmekar, Kec. Rancaekek, Kabupaten Bandung, Jawa Barat 40394</p>
-          </div>
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
           <h5 class="text-uppercase mb-3 font-weight-bold text-white">Jam Operasional</h5>
             <p>Senin-Sabtu          : 07.00-17.00</p>
             <p>Minggu & Hari Besar  : Tutup</p>
-            <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-success">Lihat Lokasi</a>
-          </div>
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <a href="https://goo.gl/maps/xrM8V4p4hk852DsNA" class="btn btn-outline-success">Lihat Lokasi</a>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-3 font-weight-bold text-white">Kainin.id</h5>
             <p><a href="index.php" style="text-decoration: none;" class="text-dark">Home</a></p>
             <p><a href="katalog.php" style="text-decoration: none;" class="text-dark">Katalog</a></p>
             <p><a href="aboutus.php" style="text-decoration: none;" class="text-dark">About Us</a></p>
             <p><a href="Contact" style="text-decoration: none;" class="text-dark">Contact</a></p>
-            <a href="" class="btn btn-success">Hubungi Kami</a>
-          </div>
+            <a href="" class="btn btn-outline-success">Hubungi Kami</a>
+        </div>
         </div>
         <hr class="mb-4">
         <div class="row">
@@ -210,12 +209,11 @@
                   <a href=""><img src="https://img.icons8.com/glyph-neue/35/000000/github.png"/></a>
                 </li>
               </ul>
-            </div>
-          </div>
+           </div>
         </div>
-         
-      </div>
-    </footer>
+      </div>   
+   </div>
+</footer>
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
