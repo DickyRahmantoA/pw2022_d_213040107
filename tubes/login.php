@@ -1,17 +1,60 @@
 <?php 
-
 session_start();
+require 'admin/functions.php';
 
-if(isset($_SESSION['login'])) {
-  header("Location: index.php");
+// cek cookie
+if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
+  $id = $_COOKIE['id'];
+  $key = $_COOKIE['key'];
+
+  // ambil username berdasarkan id
+  $result = mysqli_query(koneksi(), "SELECT username FROM user WHERE id = $id");
+  $row = mysqli_fetch_assoc($result);
+
+  // cek cookie dan username
+  if( $key === hash('sha256', $row['username']) ) {
+    $_SESSION['login'] = true;
+  }
+
+}
+
+if ( isset($_SESSION["login"]) ) {
+  header("Location:index.php");
   exit;
 }
 
-require 'admin/functions.php';
+if( isset($_POST["login"]) ){
 
-// ketika tombol login ditekan
-if(isset($_POST['login'])) {
-  $login = login($_POST);
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+
+  $result = mysqli_query(koneksi(), "SELECT * FROM user WHERE username = '$username'");
+
+  // cek username
+  if( mysqli_num_rows($result) === 1) {
+    // cek password
+    $row = mysqli_fetch_assoc($result);
+    if( password_verify($password, $row["password"]) ) {
+      // set session
+      $_SESSION["login"] = true;
+
+      // cek remember me
+      if( isset($_POST['remember']) ) {
+        // buat cookie
+
+        setcookie('id', $row['id'], time()+60);
+        setcookie('key', hash('sha256', $row['username']),
+        time() + 60);
+      }
+
+      header("Location: index.php");
+      exit;
+    }
+  }
+    
+  $error = true;
+
+
 }
 ?>
 
@@ -56,21 +99,21 @@ if(isset($_POST['login'])) {
           </div>
           <div class="col-sm-12 col-md-6 col-lg-6">
             <h4 class="text-center mt-3">Form Login</h4>
-            <?php if(isset($login['error'])) : ?>
-              <p style="color: red; font-style: italic;"><?= $login['pesan']; ?></p>
+            <?php if(isset($error)) : ?>
+              <p style="color: red; font-style: italic;">Username / password salah</p>
             <?php endif; ?>
             <form action="" method="POST">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Username</label>
-                <input placeholder="Masukkan Username anda.." name="username" type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autofocus autocomplete="off" required>
+                <label for="username" class="form-label">Username</label>
+                <input placeholder="Masukkan Username anda.." name="username" type="username" class="form-control" id="username" aria-describedby="emailHelp" autofocus autocomplete="off" required>
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input placeholder="Masukkan Password anda.." type="password" name="password" class="form-control" id="exampleInputPassword1">
+                <label for="password" class="form-label">Password</label>
+                <input placeholder="Masukkan Password anda.." type="password" name="password" class="form-control" id="password">
               </div>
               <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
+                <input type="checkbox" class="form-check-input" name="remember" id="remember">
+                <label class="form-check-label" for="remember">Ingat saya</label>
               </div>
               <button type="submit" name="login" class="btn btn-success w-100">Login</button>
             </form>

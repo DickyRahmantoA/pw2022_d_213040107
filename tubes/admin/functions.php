@@ -113,34 +113,20 @@ function ubah($data) {
   return mysqli_affected_rows($conn);
 }
 
-// function cari($keyword) {
-//   $conn = koneksi();
-
-//   if(isset($_GET["cari"])) {
-//     $keyword = $_GET["keyword"];
-//     $query = "SELECT * FROM kain
-//                 WHERE 
-//               nama LIKE '%$keyword%' OR
-//               harga LIKE '%$keyword%' OR
-//               jenis LIKE '%$keyword%' OR
-//               corak LIKE '%$keyword%' OR
-//               warna LIKE '%$keyword%' OR
-//               teknik_pembuatan LIKE '%$keyword%' OR
-//               cocok_untuk LIKE '%$keyword%' OR
-//               gramasi LIKE '%$keyword%'
-//               ";
-//     $kain = query($query);
-
-//   $result = mysqli_query($conn, $query);
-
-//   $rows = [];
-//   while ($row = mysqli_fetch_assoc($result)) {
-//     $rows[] = $row;
-//   }
-
-//   return $rows;
-//   }
-// }
+function cari($keyword) {
+    $query = "SELECT * FROM kain
+                WHERE 
+              nama LIKE '%$keyword%' OR
+              harga LIKE '%$keyword%' OR
+              jenis LIKE '%$keyword%' OR
+              corak LIKE '%$keyword%' OR
+              warna LIKE '%$keyword%' OR
+              teknik_pembuatan LIKE '%$keyword%' OR
+              cocok_untuk LIKE '%$keyword%' OR
+              gramasi LIKE '%$keyword%'
+              ";
+    return query($query);
+  }
 
 function upload() {
   // siapkan data gambar
@@ -176,28 +162,6 @@ return false;
 
 }
 
-function login($data) {
-  $conn = koneksi();
-
-  $username = htmlspecialchars($data['username']);
-  $password = htmlspecialchars($data['password']);
-
-  // cek dulu username
-  if ($user = query("SELECT * FROM user WHERE username = '$username'")) {
-    // cek password
-    if(password_verify($password, $user['password'])) {
-      // set session
-    $_SESSION['login'] = true;
-    
-    header("Location: index.php");
-    exit;
-    }
-  }
-    return [
-      'error' => true,
-      'pesan' => 'Username / Password Salah!'
-    ];
-  }
 
 function registrasi($data) {
   $conn = koneksi();

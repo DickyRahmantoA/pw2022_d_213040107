@@ -1,15 +1,23 @@
 <?php 
 require '../admin/functions.php';
-$keyword = $_GET['keyword'];
-$kain = query("SELECT * FROM kain WHERE nama LIKE '%$keyword%' OR jenis LIKE '%$keyword%'  ");
+
+$keyword = $_GET["keyword"];
+
+$query = "SELECT * FROM kain
+             WHERE 
+          nama LIKE '%$keyword%' OR
+          harga LIKE '%$keyword%' OR
+          jenis LIKE '%$keyword%' OR
+          corak LIKE '%$keyword%' OR
+          warna LIKE '%$keyword%' OR
+          teknik_pembuatan LIKE '%$keyword%' OR
+          cocok_untuk LIKE '%$keyword%' OR
+          gramasi LIKE '%$keyword%'
+        ";
+$kain = query($query)
 ?>
 
-<form action="" method="POST" class="mt-4">
-  <div class="input-group mb-3">
-     <input type="text" class="keyword form-control" name="keyword" placeholder="Cari Kain Disini.." autocomplete="off"> 
-     <button class="tombol-cari btn btn-outline-success" type="submit" name="cari">Cari</button>
-  </div>
-</form>
+
 <table class="table table-success table-striped">
   <thead>
     <tr>

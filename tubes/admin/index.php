@@ -2,10 +2,10 @@
 require 'functions.php';
 $kain = query("SELECT * FROM kain");
 
-if(isset($_POST['cari'])) {
-  $kain = cari($_POST['keyword']);
+// tombol cari ditekan
+if( isset($_POST["cari"]) ) {
+  $kain = cari($_POST["keyword"]);
 }
-
 ?>
 
 <!doctype html>
@@ -15,20 +15,28 @@ if(isset($_POST['cari'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kainin.id</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+      @media print {
+        .logout, .tambah, .form-cari, .aksi{
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
 
   <div class="container mt-5">
       <h1 class="text-center mt-5">Daftar Kain di Kainin.id</h1>
-      <a href="tambah.php" class="btn btn-outline-success">Tambah Data</a>
-
-      <form action="" method="POST" class="mt-4">
+      <a href="tambah.php" class="btn btn-outline-success tambah">Tambah Data</a>
+      <a class="btn btn-outline-success logout" href="../logout.php">keluar</a>
+      <form action="" method="POST" class="mt-4 form-cari">
         <div class="input-group mb-3">
-          <input type="text" class="keyword form-control" name="keyword" placeholder="Cari Kain Disini.." autocomplete="off"> 
-          <button class="tombol-cari btn btn-outline-success" type="submit" name="cari">Cari</button>
+          <input type="text" class="form-control" name="keyword" placeholder="Cari Kain Disini.." autocomplete="off" id="keyword"> 
+          <button class="tombol-cari btn btn-outline-success" type="submit" name="cari" id="tombol-cari">Cari</button>
         </div>
       </form>
-      <div class="container">
+
+      <div id="container">
   <table class="table table-success table-striped">
   <thead>
     <tr>
@@ -42,7 +50,7 @@ if(isset($_POST['cari'])) {
       <th scope="col">Cocok Untuk</th>
       <th scope="col">Gramasi</th>
       <th scope="col">Gambar</th>
-      <th scope="col">Aksi</th>
+      <th class="aksi" scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
@@ -69,7 +77,7 @@ if(isset($_POST['cari'])) {
             <td class="align-middle">
                 <img src="../img/<?= $k["gambar"]; ?>" height="50" class="rounded">
             </td>
-            <td class="align-middle">
+            <td class="align-middle aksi">
                 <a href="ubah.php?id=<?= $k["id"]; ?>" class="btn badge bg-warning">ubah</a>
                 <a href="hapus.php?id=<?= $k["id"]; ?>" class="btn badge bg-danger" onclick="return confirm('yakin?');">hapus</a>
             </td>

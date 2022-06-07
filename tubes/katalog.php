@@ -1,4 +1,10 @@
 <?php 
+session_start();
+
+if(!isset($_SESSION['login'])) {
+  header("Location: login.php");
+  exit;
+}
   require 'admin/functions.php';
   $kain = query("SELECT * FROM kain");
 ?>
@@ -90,7 +96,7 @@
       <div class="carousel-inner">
         <div class="container mt-2">
           <div class="carousel-item active">
-            <img src="img/c.jpg" class="d-block img-fluid" >
+            <img src="img/c.jpg" class="d-block img-fluid rounded-3">
             <div class="card-img-overlay text-center">
               <h5>First slide label</h5>
               <p>Some representative placeholder content for the first slide.</p>
@@ -121,7 +127,7 @@
             </a>
           </option>
         </select>
-        <hr>
+        <br>
         <select class="form-select form-select-md" aria-label=".form-select-sm example">
           <option selected>Jenis</option>
           <option value="1">Polyester</option>
@@ -129,7 +135,7 @@
           <option value="3">Nylon</option>
           <option value="4">Kaos</option>
         </select>
-        <hr>
+        <br>
         <select class="form-select form-select-md" aria-label=".form-select-sm example">
           <option selected>Corak</option>
           <option value="1">Kotak-kotak</option>
@@ -139,7 +145,7 @@
           <option value="5">Abstract Layer</option>
           <option value="6">Rib Knit</option>
         </select>
-        <hr>
+        <br>
         <select class="form-select form-select-md" aria-label=".form-select-sm example">
           <option selected>Warna</option>
           <option value="1">Warna warni</option>
@@ -164,14 +170,14 @@
           <option value="20">Mustard</option>
           <option value="21">Terakota</option>
         </select>
-        <hr>
+        <br>
         <select class="form-select form-select-md" aria-label=".form-select-sm example">
           <option selected>Teknik Pembuatan</option>
           <option value="1">Woven</option>
           <option value="2">Twill Woven</option>
           <option value="3">Knitting</option>
         </select>
-        <hr>
+        <br>
         <select class="form-select form-select-md" aria-label=".form-select-sm example">
         <option selected>Cocok Untuk</option>
           <option value="1">Atasan</option>
@@ -199,7 +205,7 @@
           <option value="23">Jumpsuit</option>
           <option value="24">Sweater</option>
         </select>
-        <hr>
+        <br>
         <select class="form-select form-select-md" aria-label=".form-select-sm example">
           <option selected>Gramasi</option>
           <option value="1">1-100</option>
@@ -209,7 +215,7 @@
           <option value="5">251-300</option>
           <option value="6">300++</option>
         </select>
-        <hr>
+        <br>
       </div>
     </div>
     </div>
