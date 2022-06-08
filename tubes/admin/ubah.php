@@ -74,7 +74,7 @@ if(isset($_POST['ubah'])) {
            <input type="text" class="form-control" id="gramasi" name="gramasi" value="<?= $k['gramasi']; ?>" required>
       </div>
           <img src="../img/<?= $k['gambar']; ?>" class=" mx-2 rounded-2 img-preview" width="120" style="display: block;" id="img-preview">
-          <input type="hidden" name="gambar_lama" value="<?= $k['gambar']; ?>">
+           <input type="hidden" name="gambar_lama" value="<?= $k['gambar']; ?>">
       <div class="input-group mt-4 mb-3">
            <span class="input-group-text">Gambar</span>
            <input type="file" class="form-control gambar" name="gambar" id="gambar" onchange="previewImage()">

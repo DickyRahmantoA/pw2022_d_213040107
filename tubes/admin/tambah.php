@@ -68,7 +68,7 @@ if(isset($_POST['tambah'])) {
            <span class="input-group-text" id="basic-addon1">Gramasi</span>
            <input type="text" class="form-control" name="gramasi" required>
       </div>
-      <img src="../img/nophoto.jpg" class=" mx-2 rounded-2 img-preview" width="120" style="display: block;" id="img-preview">
+          <img src="../img/nophoto.jpg" class=" mx-2 rounded-2 img-preview" width="120" style="display: block;" id="img-preview">
       <div class="input-group mt-4 mb-3">
            <span class="input-group-text" id="basic-addon1">gambar</span>
            <input type="file" class="form-control gambar" name="gambar" id="gambar" onchange="previewImage()">

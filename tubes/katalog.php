@@ -95,10 +95,8 @@ $kain = query("SELECT * FROM kain");
       <div class="carousel-inner">
         <div class="container mt-2">
           <div class="carousel-item active">
-            <img src="img/c.jpg" class="d-block img-fluid rounded-3">
-            <div class="card-img-overlay text-center">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+            <img src="img/cr4.png" class="d-block img-fluid rounded-3">
+            <div class="card-img-overlay d-flex justify-content-around">
             </div>
           </div>
         </div>
@@ -119,12 +117,11 @@ $kain = query("SELECT * FROM kain");
       <div class="offcanvas-body">
         <select class="form-select form-select-md" aria-label=".form-select-sm example">
           <option selected>Harga</option>
-          <option value="1"> 
-            <a href="#">
-              <label label for="customRange3" class="form-label"></label>
-              <input type="range" class="form-range">
-            </a>
-          </option>
+          <option value="1">Rp30000</option>
+          <option value="1">Rp50000</option>
+          <option value="1">Rp80000</option>
+          <option value="1">Rp100000</option>
+          <option value="1">Rp120000</option>
         </select>
         <br>
         <select class="form-select form-select-md" aria-label=".form-select-sm example">

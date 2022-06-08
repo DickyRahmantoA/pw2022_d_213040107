@@ -87,7 +87,7 @@ if( isset($_POST["cari2"]) ) {
     <!-- Navbar Akhir -->
 
     <!-- Carousel Awal -->
-    <div class="container">
+    <div class="container mt-3 mb-2">
         <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" 
@@ -99,24 +99,18 @@ if( isset($_POST["cari2"]) ) {
           </div>
           <div class="carousel-inner"> 
             <div class="carousel-item active">
-              <img src="img/b.jpg" class="d-block img-fluid rounded-2" alt="header1">
+              <img src="img/cr.png" class="d-block img-fluid rounded-2" alt="header1">
               <div class="card-img-overlay">
-                <h5 class="mx-5">Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/e.jpg" class="d-block img-fluid rounded-2" alt="header2">
+              <img src="img/cr2.png" class="d-block img-fluid rounded-2" alt="header2">
               <div class="card-img-overlay">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/a.jpg" class="d-block img-fluid rounded-2" alt="header3">
+              <img src="img/cr3.png" class="d-block img-fluid rounded-2" alt="header3">
               <div class="card-img-overlay">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
           </div>

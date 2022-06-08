@@ -27,7 +27,8 @@ if( isset($_POST["cari"]) ) {
 
   <div class="container mt-5">
       <h1 class="text-center mt-5">Daftar Kain di Kainin.id</h1>
-      <a href="tambah.php" class="btn btn-outline-success tambah">Tambah Data</a>
+      <a href="tambah.php"  class="btn btn-outline-success tambah">Tambah Data</a>
+      <a href="../print/cetak.php" target="_blank" class="btn btn-outline-success">Cetak</a>
       <a class="btn btn-outline-success logout" href="../logout.php">keluar</a>
       <form action="" method="POST" class="mt-4 form-cari">
         <div class="input-group mb-3">
