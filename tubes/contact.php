@@ -54,9 +54,9 @@ if(!isset($_SESSION['login'])) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <form class="d-flex ms-auto my-4 my-lg-0" role="search">
-        <input class="form-control me-2" type="search" placeholder="Cari Kain Disini.." aria-label="Search">
-        <button class="btn btn-light" type="submit"><img src="https://img.icons8.com/material-sharp/18/000000/search.png"/></button>
+    <form action="katalog.php" method="POST" class="d-flex ms-auto my-4 my-lg-0" role="search">
+        <input class="form-control me-2" type="text" name="keyword2" placeholder="Cari Kain Disini.." aria-label="Search" autocomplete="off" id="keyword2">
+        <button class="btn btn-light" name="cari2" id="klik-cari" type="submit"><img src="https://img.icons8.com/material-sharp/18/000000/search.png"/></button>
       </form>
       <ul class="navbar-nav ms-auto mb-lg-0">
         <li class="nav-item">

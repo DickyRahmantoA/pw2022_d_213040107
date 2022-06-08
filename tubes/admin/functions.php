@@ -20,22 +20,59 @@ function query($query) {
   return $rows;
 }
 
+function upload() {
+  // siapkan data gambar
+  $nama_file = $_FILES["gambar"]["name"];
+  $tipe_file = $_FILES["gambar"]["type"];
+  $ukuran_file = $_FILES["gambar"]["size"];
+  $error = $_FILES['gambar']['error'];
+  $tmp_file =$_FILES['gambar']['tmp_name'];
+
+  // ketika tidak ada gambar yang dipilih
+  if($error == 4) {
+    return 'nophoto.jpg';
+  }
+
+  // cek ekstensi file
+  $daftar_gambar = ['jpg', 'jpeg', 'png'];
+  $ekstensi_file = explode('.', $nama_file);
+  $ekstensi_file = strtolower(end($ekstensi_file));
+  if(!in_array($ekstensi_file, $daftar_gambar)) {
+    echo "<script>
+          alert('yang anda pilih bukan gambar!');
+          </script>";
+    return false;
+  }
+
+  // cek tipe file
+  if($tipe_file != 'image/jpeg' && $tipe_file != 'image/png') {
+    echo "<script>
+            alert('yang anda pilih bukan gambar!');
+          </script>";
+    return false;
+  }
+  // cek jika ukuran lebih besar dari 5MB
+  if($ukuran_file > 5000000) {
+    echo "<script>
+    alert('Ukuran gambar terlalu besar!');
+    </script>";
+    return false;
+  }
+
+  // lolos pengecekan gambar
+  // buat nama file baru
+  $nama_file_baru = uniqid();
+  $nama_file_baru .= '.';
+  $nama_file_baru .= $ekstensi_file;
+  // upload gambar
+  move_uploaded_file($tmp_file, '../img/' . $nama_file_baru);
+
+  return $nama_file_baru;
+
+}
 
 function tambah($data) {
     $conn = koneksi();
-
-     //  cek apakah ada gambar yang diupload
-     if($_FILES["gambar"]["error"] == 4){
-      // jika user tidak memilih gambar, beri gambar default
-      $gambar = 'nophoto.jpeg';
-    } else {
-      // jika user memilih gambar, jalankan fungsi upload
-      $gambar = upload();
-      // cek apakah upload berhasil
-      if(!$gambar) {
-        return false;
-      }
-    }
     
     $nama = htmlspecialchars($data["nama"]);
     $harga = htmlspecialchars($data["harga"]);
@@ -46,6 +83,14 @@ function tambah($data) {
     $cocok_untuk = htmlspecialchars($data["cocok_untuk"]);
     $gramasi = htmlspecialchars($data["gramasi"]);
     // $gambar = htmlspecialchars($data["gambar"]);
+
+
+    // jika user memilih gambar, jalankan fungsi upload
+    $gambar = upload();
+    // cek apakah upload berhasil
+    if(!$gambar) {
+      return false;
+    }
 
     $query = "INSERT INTO 
                 kain
@@ -65,7 +110,7 @@ function hapus($id) {
     $k = query("SELECT * FROM kain WHERE id = $id")[0];
 
     // hapus data gambar
-    if($k["gambar"] !== 'nophoto.jpeg') {
+    if($k["gambar"] != 'nophoto.jpg') {
       unlink('../img/' . $k["gambar"]);
     }
   
@@ -92,7 +137,7 @@ function ubah($data) {
     return false;
   }
 
-  if($gambar == 'nophoto.jpeg') {
+  if($gambar == 'nophoto.jpg') {
     $gambar = $gambar_lama;
   }
 
@@ -128,39 +173,16 @@ function cari($keyword) {
     return query($query);
   }
 
-function upload() {
-  // siapkan data gambar
-  $filename = $_FILES["gambar"]["name"];
-  $filesize = $_FILES["gambar"]["size"];
-  $filetmpname = $_FILES["gambar"]["tmp_name"];
-  $filetype = pathinfo($filename, PATHINFO_EXTENSION);
-  $allowedtype = ["jpg", "jpeg", "png"];
-
-  // cek apakah file bukan gambar
-  if(!in_array($filetype, $allowedtype)) {
-    echo "<script>
-          alert('Yang anda upload bukan gambar!');
-          </script>";
-    return false;
+function cari2($keyword2) {
+    $query = "SELECT * FROM kain
+                WHERE 
+              nama LIKE '%$keyword2%' OR
+              harga LIKE '%$keyword2%' OR
+              ";
+    return query($query);
   }
 
-  // cek jika ukuran lebih besar dari 1MB
-  if($filesize > 1000000) {
-    echo "<script>
-    alert('Ukuran gambar terlalu besar!');
-    </script>";
-return false;
-  }
 
-  // lolos pengecekan gambar
-  // buat nama file baru
-  $newfilename = uniqid() . $filename;
-  // upload gambar
-  move_uploaded_file($filetmpname, '../img/' . $newfilename);
-
-  return $newfilename;
-
-}
 
 
 function registrasi($data) {

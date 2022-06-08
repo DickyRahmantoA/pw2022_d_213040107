@@ -55,7 +55,7 @@ $kain = query($query)
             <td class="align-middle"><?= $k["cocok_untuk"]?></td>
             <td class="align-middle"><?= $k["gramasi"]?></td>
             <td class="align-middle">
-                <img src="img/<?= $k["gambar"]; ?>" height="50" class="rounded-circle">
+                <img src="../img/<?= $k["gambar"]; ?>" height="50" class="rounded-circle">
             </td>
             <td class="align-middle">
                 <a href="ubah.php?id=<?= $k["id"]; ?>" class="btn badge bg-warning">ubah</a>

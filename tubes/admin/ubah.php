@@ -39,7 +39,7 @@ if(isset($_POST['ubah'])) {
       <h1>Ubah Data Kain</h1>
       <a href="index.php" class="btn btn-primary">Kembali ke Daftar Kain</a>
 
-      <form action="" method="post" autocomplete="off">
+      <form action="" method="post" autocomplete="off" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?= $k['id']; ?>">
       <div class="input-group mt-4 mb-3">
            <span class="input-group-text">Nama Kain</span>
@@ -73,11 +73,11 @@ if(isset($_POST['ubah'])) {
            <span class="input-group-text">Gramasi</span>
            <input type="text" class="form-control" id="gramasi" name="gramasi" value="<?= $k['gramasi']; ?>" required>
       </div>
+          <img src="../img/<?= $k['gambar']; ?>" class=" mx-2 rounded-2 img-preview" width="120" style="display: block;" id="img-preview">
+          <input type="hidden" name="gambar_lama" value="<?= $k['gambar']; ?>">
       <div class="input-group mt-4 mb-3">
            <span class="input-group-text">Gambar</span>
-           <input type="hidden" name="gambar_lama" value="<?= $k['gambar']; ?>">
-
-           <input type="file" class="form-control gambar" id="gambar" name="gambar" value="<?= $k['gambar']; ?>">
+           <input type="file" class="form-control gambar" name="gambar" id="gambar" onchange="previewImage()">
       </div>
 
                   <button type="submit" class="btn btn-primary" name="ubah">Ubah Data</button>
@@ -86,7 +86,7 @@ if(isset($_POST['ubah'])) {
       </div>
 
     </div>
-
+    <script src="../dist/js/script.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

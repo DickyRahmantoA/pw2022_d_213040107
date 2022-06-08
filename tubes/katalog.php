@@ -1,12 +1,11 @@
 <?php 
 session_start();
-
+require 'admin/functions.php';
 if(!isset($_SESSION['login'])) {
   header("Location: login.php");
   exit;
 }
-  require 'admin/functions.php';
-  $kain = query("SELECT * FROM kain");
+$kain = query("SELECT * FROM kain");
 ?>
 
 <!doctype html>
@@ -68,9 +67,9 @@ if(!isset($_SESSION['login'])) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <form class="d-flex ms-auto my-4 my-lg-0" role="search">
-        <input class="form-control me-2" type="search" placeholder="Cari Kain Disini.." aria-label="Search">
-        <button class="btn btn-light" type="submit"><img src="https://img.icons8.com/material-sharp/18/000000/search.png"/></button>
+    <form action="" method="POST" class="d-flex ms-auto my-4 my-lg-0" role="search">
+        <input class="form-control me-2" type="text" name="keyword2" placeholder="Cari Kain Disini.." aria-label="Search" autocomplete="off" id="keyword2">
+        <button class="btn btn-light" name="cari2" id="klik-cari" type="submit"><img src="https://img.icons8.com/material-sharp/18/000000/search.png"/></button>
       </form>
       <ul class="navbar-nav ms-auto mb-lg-0">
         <li class="nav-item">
@@ -222,13 +221,13 @@ if(!isset($_SESSION['login'])) {
       <!-- Kategori Akhir -->
 
       <!-- Produk Awal -->
-  <div class="container mt-4">
+  <div class="container mt-4" id="container">
   <div class="row">
   <?php foreach($kain as $k) : ?>
     <div class="col-md-4 mb-4">
       <div class="card">
         <div class="card-body">
-          <div class="card-img">
+          <div class="card-img text-center">
             <a href="detail.php?id=<?= $k['id'];?>" class="d-flex"><img src="img/<?= $k['gambar']; ?>" height="250" class="rounded-3 img-fluid"></a>
           </div>
           <h5 class="card-title mt-2"><?= $k['nama']; ?></h5>
@@ -303,7 +302,7 @@ if(!isset($_SESSION['login'])) {
    </div>
 </footer>
     <!-- Akhir Footer -->
-
+<script src="dist/js/script2.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>
