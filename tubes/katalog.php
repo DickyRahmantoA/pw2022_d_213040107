@@ -6,6 +6,8 @@ if(!isset($_SESSION['login'])) {
   exit;
 }
 $kain = query("SELECT * FROM kain");
+
+
 ?>
 
 <!doctype html>
@@ -115,15 +117,6 @@ $kain = query("SELECT * FROM kain");
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <select class="form-select form-select-md" aria-label=".form-select-sm example">
-          <option selected>Harga</option>
-          <option value="1">Rp30000</option>
-          <option value="1">Rp50000</option>
-          <option value="1">Rp80000</option>
-          <option value="1">Rp100000</option>
-          <option value="1">Rp120000</option>
-        </select>
-        <br>
         <select class="form-select form-select-md" aria-label=".form-select-sm example">
           <option selected>Jenis</option>
           <option value="1">Polyester</option>

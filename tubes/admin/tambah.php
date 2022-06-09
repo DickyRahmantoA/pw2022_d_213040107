@@ -8,7 +8,7 @@ if(isset($_POST['tambah'])) {
     if(tambah($_POST) > 0) {
         echo "<script>
                 alert('data berhasil ditambahkan!');
-                document.location.href = 'index.php';
+                document.location.href = 'admin.php';
               </script>";
     }
     
@@ -33,7 +33,7 @@ if(isset($_POST['tambah'])) {
 
     <div class="container mt-4">
       <h1>Tambah Kain</h1>
-      <a href="index.php" class="btn btn-primary">Kembali ke Daftar Kain</a>
+      <a href="admin.php" class="btn btn-primary">Kembali ke Daftar Kain</a>
 
     <form action="" method="POST" autocomplete="off" enctype="multipart/form-data">
       <div class="input-group mt-4 mb-3">

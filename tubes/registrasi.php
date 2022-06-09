@@ -50,7 +50,7 @@
       <div class="box">
         <div class="row contentform">
           <div class="col-sm-12 col-md-6 col-lg-6 mt-3">
-            <img src="/tubes/img/1.jpg" class="img-fluid rounded-4">
+            <img src="img/1.jpg" class="img-fluid rounded-4">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-6">
             <h4 class="text-center">Form Registrasi</h4>

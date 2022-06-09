@@ -6,6 +6,20 @@ $kain = query("SELECT * FROM kain");
 if( isset($_POST["cari"]) ) {
   $kain = cari($_POST["keyword"]);
 }
+
+if(isset($_GET["nama"])) {
+  $kain = query("SELECT * FROM kain ORDER BY nama ASC");
+}
+if(isset($_GET["nama2"])) {
+  $kain = query("SELECT * FROM kain ORDER BY nama DESC");
+}
+if(isset($_GET["jenis-kain"])) {
+  $kain = query("SELECT * FROM kain ORDER BY jenis ASC");
+}
+if(isset($_GET["jenis-kain2"])) {
+  $kain = query("SELECT * FROM kain ORDER BY jenis DESC");
+}
+
 ?>
 
 <!doctype html>
@@ -24,12 +38,34 @@ if( isset($_POST["cari"]) ) {
     </style>
   </head>
   <body>
-
   <div class="container mt-5">
-      <h1 class="text-center mt-5">Daftar Kain di Kainin.id</h1>
+  <div class="container mt-5">
+      <h1 class="text-center mt-5 mb-5">Daftar Kain di Kainin.id</h1>
+      <form action="" method="GET">
       <a href="tambah.php"  class="btn btn-outline-success tambah">Tambah Data</a>
       <a href="../print/cetak.php" target="_blank" class="btn btn-outline-success">Cetak</a>
-      <a class="btn btn-outline-success logout" href="../logout.php">keluar</a>
+      <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Urutkan Nama A-Z
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <button class="dropdown-item" type="submit" name="nama">A-Z</button>
+            <button class="dropdown-item" type="submit" name="nama2">Z-A</button>
+          </ul>
+        </div>
+      <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Urutkan Nama Jenis A-Z
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <button class="dropdown-item" type="submit" name="jenis-kain">A-Z</button>
+            <button class="dropdown-item" type="submit" name="jenis-kain2">Z-A</button>
+          </ul>
+        </div>
+        <a href="admin.php" class="btn btn-outline-success" type="submit">Reset Pengurutan</a>
+        <a class="btn btn-outline-success logout" href="../logout.php">keluar</a>
+      </div>
+      </form>
       <form action="" method="POST" class="mt-4 form-cari">
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="keyword" placeholder="Cari Kain Disini.." autocomplete="off" id="keyword"> 
@@ -76,7 +112,7 @@ if( isset($_POST["cari"]) ) {
             <td class="align-middle"><?= $k["cocok_untuk"]?></td>
             <td class="align-middle"><?= $k["gramasi"]?></td>
             <td class="align-middle">
-                <img src="../img/<?= $k["gambar"]; ?>" height="50" class="rounded">
+                <img src="../img/<?= $k["gambar"]; ?>" height="50" class="rounded-2">
             </td>
             <td class="align-middle aksi">
                 <a href="ubah.php?id=<?= $k["id"]; ?>" class="btn badge bg-warning">ubah</a>
@@ -86,6 +122,7 @@ if( isset($_POST["cari"]) ) {
      <?php endforeach; ?>
   </tbody>
 </table>
+</div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="../dist/js/script.js"></script>

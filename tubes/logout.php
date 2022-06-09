@@ -8,7 +8,7 @@ session_destroy(); // session yang telah ada/ dibuat akan dihancurkan
 setcookie('id', '', time() - 3600);
 setcookie('key', '', time() - 3600);
 
-header("Location: login.php");
+header("Location:login.php");
 exit;
 
 ?>

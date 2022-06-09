@@ -12,7 +12,7 @@ if(isset($_POST['ubah'])) {
     if(ubah($_POST) > 0) {
         echo "<script>
                 alert('data berhasil diubah!');
-                document.location.href = 'index.php';
+                document.location.href = 'admin.php';
               </script>";
     }
     
@@ -37,7 +37,7 @@ if(isset($_POST['ubah'])) {
 
     <div class="container">
       <h1>Ubah Data Kain</h1>
-      <a href="index.php" class="btn btn-primary">Kembali ke Daftar Kain</a>
+      <a href="admin.php" class="btn btn-primary">Kembali ke Daftar Kain</a>
 
       <form action="" method="post" autocomplete="off" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?= $k['id']; ?>">

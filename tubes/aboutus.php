@@ -82,16 +82,16 @@ if(!isset($_SESSION['login'])) {
       <h1 style="text-align: center;" class="mt-5">Tentang Toko</h1>
       <div class="row text-center text-md-left mt-4">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <img src="/tubes/img/5.jpg" class="img-fluid rounded-4">
+          <img src="img/5.jpg" class="img-fluid rounded-4">
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <img src="/tubes/img/1.jpg" class="img-fluid rounded-4">
+          <img src="img/1.jpg" class="img-fluid rounded-4">
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <img src="/tubes/img/4.jpg" class="img-fluid rounded-4">
+          <img src="img/4.jpg" class="img-fluid rounded-4">
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <img src="/tubes/img/3.jpg" class="img-fluid rounded-4">
+          <img src="img/3.jpg" class="img-fluid rounded-4">
         </div>
       </div>
       <div class="container" style="text-align: justify;">

@@ -19,7 +19,7 @@ if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
 }
 
 if ( isset($_SESSION["login"]) ) {
-  header("Location:index.php");
+  header("Location:admin/admin.php");
   exit;
 }
 
@@ -28,7 +28,7 @@ if( isset($_POST["login"]) ){
   $username = $_POST["username"];
   $password = $_POST["password"];
 
-  $result = mysqli_query(koneksi(), "SELECT * FROM user WHERE username = '$username'");
+  $result = mysqli_query(koneksi(), "SELECT * FROM user WHERE username = 'admin'");
 
   // cek username
   if( mysqli_num_rows($result) === 1) {
@@ -37,6 +37,23 @@ if( isset($_POST["login"]) ){
     if( password_verify($password, $row["password"]) ) {
       // set session
       $_SESSION["login"] = true;
+      header("Location:admin/admin.php");
+      exit;
+    }
+  }
+    
+  $error = true;
+
+  $result = mysqli_query(koneksi(), "SELECT * FROM user WHERE username = '$username'");
+
+  if( mysqli_num_rows($result) === 1) {
+    // cek password
+    $row = mysqli_fetch_assoc($result);
+    if( password_verify($password, $row["password"]) ) {
+      // set session
+      $_SESSION["login"] = true;
+      header("Location: index.php");
+      exit;
 
       // cek remember me
       if( isset($_POST['remember']) ) {
@@ -46,9 +63,6 @@ if( isset($_POST["login"]) ){
         setcookie('key', hash('sha256', $row['username']),
         time() + 60);
       }
-
-      header("Location: index.php");
-      exit;
     }
   }
     
@@ -95,7 +109,7 @@ if( isset($_POST["login"]) ){
       <div class="box">
         <div class="row contentform">
           <div class="col-sm-12 col-md-6 col-lg-6">
-            <img src="/tubes/img/1.jpg" class="img-fluid rounded-4">
+            <img src="img/1.jpg" class="img-fluid rounded-4">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-6">
             <h4 class="text-center mt-3">Form Login</h4>

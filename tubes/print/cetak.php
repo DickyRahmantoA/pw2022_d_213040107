@@ -77,6 +77,6 @@ $cetak = '
 </html>';
 
 $mpdf->WriteHTML("$cetak");
-$mpdf->Output("Daftar Mahasiswa", "I");
+$mpdf->Output("Daftar Kain", "I");
 
  ?>
